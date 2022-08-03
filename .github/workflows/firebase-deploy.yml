@@ -15,10 +15,10 @@ jobs:
       uses: actions/setup-node@v1
     - name: Setup the code
       run: npm ci
-    - name: Test the code
-      run: npm test
-    - name: Build App
-      run: npm run build
+    - name: Build and Test App
+      run: npm run test --if-present
+      env:
+        CI: false
     - name: Check Directory
       run: ls .
     - name: Deploy to Firebase
