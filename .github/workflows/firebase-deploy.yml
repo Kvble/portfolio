@@ -17,16 +17,10 @@ jobs:
         node-version: 16
     - name: Setup the code
       run: npm ci
-    - name: Check Directory
-      run: ls .
     - name: Build App
       run: npm run build 
       env:
         CI: false
-    - name: Test App
-      run: npm run test --if-present
-    - name: Check Directory
-      run: ls .
     - name: Deploy to Firebase
       uses: mohammed-atif/firebase-publish-react@v1.0
       with:
