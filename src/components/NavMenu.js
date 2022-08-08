@@ -1,15 +1,15 @@
-import './NavMenu.css';
-import NavButton from './NavButton';
+import "./NavMenu.css";
+import NavButton from "./NavButton";
 
 function NavMenu() {
-  return (
-    <div className="navmenu">
-        <NavButton text="About" />
-        <NavButton text="Work" />
-        <NavButton text="Contact" />
-        <div className="dot"></div>
-    </div>
-  );
+	return (
+		<div className="navmenu">
+			<NavButton text="Home" link="/" />
+			<NavButton text="About" link="/about" />
+			<NavButton text="Projects" link="/projects" />
+			<NavButton text="Contact" link="/contact" />
+		</div>
+	);
 }
 
 export default NavMenu;
