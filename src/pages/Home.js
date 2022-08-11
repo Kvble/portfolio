@@ -1,7 +1,14 @@
+import "./Home.css";
+
 export default function Home() {
 	return (
-		<div>
-			<h2>Home</h2>
+		<div className="home">
+			<div className="title">
+				
+			</div>
+			<div className="preview">
+				
+			</div>
 		</div>
 	);
 }

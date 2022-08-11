@@ -1,0 +1,12 @@
+
+.home .title{
+    border: 1px solid red;
+    color: white;
+    height: 55%;
+}
+
+.home .preview{
+    border: 1px solid red;
+    color: white;
+    height: 45%;
+}
