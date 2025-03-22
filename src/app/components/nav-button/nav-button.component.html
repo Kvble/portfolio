@@ -1,0 +1,7 @@
+<a
+  [routerLink]="link"
+  class="navbutton"
+  [class.active]="link === '/'"
+  (click)="activate($event)">
+  {{ text }}
+</a>
