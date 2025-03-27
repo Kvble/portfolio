@@ -1,0 +1,78 @@
+.profile-intro {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+}
+
+.profile-image {
+	width: 200px;
+	height: 200px;
+	border-radius: 24px;
+	background-image: url("/assets/images/profile.jpg");
+	background-size: 150%;
+	background-position: 0 70%;
+}
+
+.profile-side {
+	padding: 30px 20px;
+	justify-content: center;
+    align-items: center;
+}
+
+.profile-name {
+	display: block;
+	font-size: 25px;
+	font-weight: 600;
+	width: 100%;
+}
+
+.profile-title{
+	display: block;
+	margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+	color: rgb(200, 200, 200);
+}
+
+.typewriter-text {
+    color: white;
+    font-weight: bold;
+}
+
+.profile-availability{
+	padding: 10px 15px;
+	border-radius: 50px;
+	width: fit-content;
+	font-size: 16px;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	background-color: rgb(25, 25, 25);
+	border: 1px solid rgb(32, 32, 32);
+}
+
+.availability-text{
+	color: rgb(200, 200, 200);
+}
+
+.availability-indicator {
+	margin: 0px 5px 0px 0px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #FF0000; /* Verde brillante */
+    animation: pulse 1.2s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        opacity: 1;
+		box-shadow: 0 0 5px #FF0000;
+    }
+    to {
+		box-shadow: 0 0 10px #FF0000, 0 0 20px #FF0000;
+    }
+}

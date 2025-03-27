@@ -1,0 +1,36 @@
+.main-cta {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+}
+
+.main-button {
+	background-color: rgb(35, 35, 35);
+	color: white;
+	border-radius: 12px;
+	padding: 25px 10px;
+	width: 240px;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	transition: transform 0.3s ease-in-out;
+}
+
+.main-button:hover {
+	background-color: rgb(40, 40, 40);
+}
+
+.button-label {
+	display: inline;
+	margin-left: 15px;
+}
+
+.icon {
+	width: 20px;
+	height: 20px;
+	font-size: 18px;
+}
