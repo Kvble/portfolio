@@ -2,10 +2,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-    align-items: center;
+	min-height: 100vh;
 	font-family: "Manrope", "Manrope Placeholder", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;

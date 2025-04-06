@@ -1,0 +1,41 @@
+.carousel-container {
+	overflow: hidden;
+	width: 100%;
+
+	-webkit-mask-image: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
+  mask-image: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
+}
+
+.carousel-track {
+	display: flex;
+	gap: 10px;
+	animation: scroll 25s linear infinite;
+	width: max-content;
+}
+
+.carousel-item {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	background-color: rgb(30, 30, 30);
+	color: white;
+	padding: 10px 20px;
+	border-radius: 999px;
+	font-weight: 600;
+	white-space: nowrap;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-icon {
+	font-size: 20px;
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}

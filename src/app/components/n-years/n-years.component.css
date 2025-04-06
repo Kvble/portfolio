@@ -30,4 +30,17 @@
 	font-size: 30px;
 	font-weight: 700;
 	color: #fff;
+	white-space: nowrap;
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	.n-years-number {
+		font-size: 100px;
+	}
+	.n-years-label {
+		font-size: 25px;
+		white-space: normal;
+		text-align: center;
+	}
 }

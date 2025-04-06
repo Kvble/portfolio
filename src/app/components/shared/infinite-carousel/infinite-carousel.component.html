@@ -1,0 +1,8 @@
+<div class="carousel-container">
+	<div class="carousel-track">
+		<div class="carousel-item" *ngFor="let item of repeatedItems">
+			<fa-icon [icon]="item.icon" class="carousel-icon"></fa-icon>
+			<span class="carousel-label">{{ item.label }}</span>
+		</div>
+	</div>
+</div>

@@ -31,3 +31,13 @@
 	font-weight: 700;
 	color: #fff;
 }
+
+
+@media (max-width: 768px) {
+	.n-projects-number {
+		font-size: 100px;
+	}
+	.n-projects-label {
+		font-size: 25px;
+	}
+}

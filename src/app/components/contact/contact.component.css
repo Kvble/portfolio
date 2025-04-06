@@ -6,3 +6,9 @@
 	width: calc(100% - 40px);
 	margin: 20px auto;
 }
+
+@media (max-width: 768px) {
+	.contact-container {
+		width: calc(100% - 70px);
+	}
+}
