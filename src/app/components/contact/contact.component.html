@@ -1,14 +1,6 @@
-<div class="main-cta">
-	<a href="mailto:business@kevinxavierandrade.com" class="main-button">
-		<fa-icon [icon]="faEnvelope" class="icon"></fa-icon>
-		<p class="button-label">E-Mail</p>
-	</a>
-	<a
-		href="/assets/docs/kevinxavierandrade_cv.pdf"
-		download
-		class="main-button"
-	>
-		<fa-icon [icon]="faEnvelope" class="icon"></fa-icon>
-		<p class="button-label">Download CV</p>
-	</a>
+<div class="contact-container">
+	<app-button href="mailto:business@kevinxavierandrade.com" [icon]="faEnvelope" label="Send me an E-mail"></app-button>
+	<app-button href="https://www.linkedin.com/in/kevinxavierandrade/" [icon]="faLinkedin" label="@kevinxavierandrade"></app-button>
+	<app-button href="https://www.instagram.com/iamkvble/" [icon]="faInstagram" label="@iamkvble"></app-button>
+	<app-button href="https://github.com/Kvble" [icon]="faGithub" label="@Kvble"></app-button>
 </div>
