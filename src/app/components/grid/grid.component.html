@@ -1,13 +1,15 @@
 <div class="grid-container">
-	<div class="card workflow">workflow</div>
+	<div class="card workflow">
+		<app-workflow></app-workflow>
+	</div>
 	<div class="card contact">
 		<app-contact></app-contact>
 	</div>
 	<div class="card n-projects">
-		<app-n-projects></app-n-projects>
+		<app-counter [value]="10" label="Projects" [animated]="true"></app-counter>
 	</div>
 	<div class="card n-years">
-		<app-n-years></app-n-years>
+		<app-counter [value]="4" label="Years Expertise" suffix="+" [animated]="false"></app-counter>
 	</div>
 	<div class="card profile">
 		<app-profile></app-profile>

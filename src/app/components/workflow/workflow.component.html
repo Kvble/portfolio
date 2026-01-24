@@ -1,0 +1,11 @@
+<div class="workflow-container">
+	<div
+		*ngFor="let label of labels"
+		class="label"
+		#labelElement
+		(mouseenter)="showTooltip(label, labelElement)"
+		(mouseleave)="hideTooltip()"
+	>
+		{{ label.name }}
+	</div>
+</div>

@@ -1,0 +1,22 @@
+.workflow-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.label {
+	display: inline-flex; /* Flessibile per il contenuto */
+	padding: 10px;
+	background-color: #333;
+	color: white;
+	cursor: pointer;
+	border-radius: 5px;
+	position: relative; /* Necessario per il posizionamento del tooltip */
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	min-width: 100px;
+	width: auto; /* In modo che si espanda per contenere il testo */
+	pointer-events: auto; /* Permette l'interazione con l'elemento */
+	z-index: 10; /* Assicura che la label sia sopra gli altri elementi */
+}

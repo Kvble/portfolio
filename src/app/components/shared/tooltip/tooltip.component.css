@@ -1,0 +1,10 @@
+.tooltip-overlay {
+	position: fixed;
+	z-index: 9999; /* Garantisce che il tooltip sia sopra gli altri contenuti */
+	background-color: black;
+	color: white;
+	padding: 8px;
+	border-radius: 5px;
+	font-size: 14px;
+	transition: opacity 0.2s ease;
+}
