@@ -45,5 +45,14 @@
 	
 	.skills-title {
 		font-size: 18px;
+		margin-bottom: 12px;
+	}
+	
+	.skills-sections {
+		gap: 12px;
+	}
+	
+	.section-title {
+		font-size: 12px;
 	}
 }

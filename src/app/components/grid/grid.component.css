@@ -9,12 +9,13 @@
 		"contact clients clients projects";
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
-	width: 1600px;
+	max-width: 1600px;
+	width: 95%;
 	height: auto;
 	min-height: 80vh;
 	gap: 15px;
 	color: white;
-	margin-top: 10vh;
+	margin: 10vh auto 5vh auto;
 }
 
 .card {
@@ -72,25 +73,54 @@
 	animation-delay: 0.4s;
 }
 
+/* Tablet breakpoint */
+@media (max-width: 1200px) {
+	.grid-container {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(5, auto);
+		grid-template-areas:
+			"workflow n-projects n-years"
+			"workflow profile profile"
+			"contact profile profile"
+			"contact skills skills"
+			"clients projects skills";
+		width: 90%;
+		min-height: auto;
+		gap: 12px;
+	}
+}
+
+/* Mobile breakpoint */
 @media (max-width: 768px) {
 	.grid-container {
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(9, 1fr);
+		grid-template-rows: repeat(10, auto);
 		grid-template-areas:
 			"n-projects n-years"
 			"profile profile"
 			"profile profile"
 			"skills skills"
 			"skills skills"
+			"workflow workflow"
+			"contact contact"
 			"clients clients"
-			"projects projects"
-			"workflow contact"
-			"workflow contact";
+			"projects projects";
 		max-width: 600px;
 		width: 90%;
-		margin: auto;
-		margin-top: 2vh;
-		margin-bottom: 2vh;
-		height: auto;
+		margin: 2vh auto 5vh auto;
+		gap: 10px;
+	}
+	
+	.card {
+		border-radius: 16px;
+	}
+	
+	.n-projects,
+	.n-years {
+		min-height: 180px;
+	}
+	
+	.profile {
+		padding: 20px;
 	}
 }
