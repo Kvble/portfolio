@@ -1,60 +1,50 @@
 .button-container {
-	position: relative;
 	display: flex;
-	background-color: rgb(35, 35, 35);
-	color: white;
+	align-items: center;
+	gap: 16px;
+	padding: 16px 20px;
+	background-color: rgba(255, 255, 255, 0.05);
 	border-radius: 12px;
-	padding: 15px 0;
-	width: 100%;
-	text-decoration: none;
-	font-weight: bold;
-	font-size: 16px;
 	cursor: pointer;
-	transition: transform 0.3s ease-in-out;
+	transition: background-color 0.2s ease;
+	text-decoration: none;
+	color: #fff;
 }
 
 .button-container:hover {
-	background-color: rgb(40, 40, 40);
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
-.button-content {
+.button-icon-container {
 	display: flex;
 	align-items: center;
-	gap: 20px;
-	min-width: 200px;
-	justify-content: flex-start;
-	margin-left: 15px;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	flex-shrink: 0;
 }
 
 .button-icon {
-	width: 25px;
-	font-size: 30px;
-	text-align: center;
-	flex-shrink: 0;
-	margin: 0;
+	color: #fff;
+	font-size: 18px;
 }
 
 .button-label {
+	color: #fff;
 	font-size: 16px;
+	font-weight: 500;
 	margin: 0;
 }
 
 @media (max-width: 768px) {
 	.button-container {
-		justify-content: center;
-		padding: 20px 0;
-	}
-
-	.button-content {
-		margin-left: 0;
+		padding: 10px 14px;
 		justify-content: center;
 	}
-
+	
 	.button-label {
 		display: none;
-	}
-
-	.button-icon {
-		font-size: 30px;
 	}
 }

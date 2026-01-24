@@ -1,10 +1,26 @@
 .contact-container {
-	position: relative;
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	height: 100%;
 	width: calc(100% - 40px);
-	margin: 20px auto;
+	margin: 0 auto;
+	padding: 20px 0;
+	box-sizing: border-box;
+}
+
+.contact-title {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+	margin: 0 0 20px 0;
+	text-align: center;
+}
+
+.contact-links {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	justify-content: space-between;
 }
 
 @media (max-width: 768px) {

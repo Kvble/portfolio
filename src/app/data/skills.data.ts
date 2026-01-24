@@ -1,48 +1,65 @@
+import { SkillItem } from '../models';
 import {
-	faWindows,
-	faAngular,
-	faHtml5,
-	faCss3Alt,
-	faJsSquare,
-	faPython,
-	faGithub,
-	faGitAlt
-} from '@fortawesome/free-brands-svg-icons';
-import {
-	faCode,
+	faBrain,
+	faRobot,
+	faWandMagicSparkles,
+	faFileLines,
+	faEye,
+	faImage,
 	faNetworkWired,
 	faCloud,
+	faCodeBranch,
 	faDatabase,
-	faBrain,
-	faMagic,
-	faLeaf
+	faCode,
+	faMobile,
+	faServer,
+	faGlobe,
 } from '@fortawesome/free-solid-svg-icons';
-import { SkillItem } from '../models';
+import {
+	faPython,
+	faMicrosoft,
+	faAngular,
+	faJs,
+	faHtml5,
+	faSwift,
+} from '@fortawesome/free-brands-svg-icons';
 
-export const DEVELOPMENT_SKILLS: SkillItem[] = [
-	{ label: 'Angular', icon: faAngular },
-	{ label: 'JavaScript', icon: faJsSquare },
-	{ label: 'HTML', icon: faHtml5 },
-	{ label: 'CSS', icon: faCss3Alt },
+// AI & LLMs
+export const AI_LLM_SKILLS: SkillItem[] = [
+	{ label: 'LLMs', icon: faBrain },
+	{ label: 'AI Agents', icon: faRobot },
+	{ label: 'Prompt Optimization', icon: faWandMagicSparkles },
+	{ label: 'Document Intelligence', icon: faFileLines },
+	{ label: 'OCR', icon: faEye },
+	{ label: 'Image & File Analysis', icon: faImage },
+];
+
+// Backend Development
+export const BACKEND_SKILLS: SkillItem[] = [
 	{ label: 'Python', icon: faPython },
-	{ label: '.NET', icon: faWindows },
 	{ label: 'C#', icon: faCode },
-	{ label: 'C++', icon: faCode },
-	{ label: 'ASP.NET', icon: faWindows },
-	{ label: 'API REST', icon: faNetworkWired }
+	{ label: '.NET', icon: faMicrosoft },
+	{ label: 'REST APIs', icon: faNetworkWired },
 ];
 
-export const TOOLS_SKILLS: SkillItem[] = [
-	{ label: 'Git', icon: faGitAlt },
-	{ label: 'GitHub', icon: faGithub },
-	{ label: 'Azure', icon: faCloud },
-	{ label: 'Azure DevOps', icon: faCloud },
-	{ label: 'SQL', icon: faDatabase },
+// Cloud & Platforms
+export const CLOUD_SKILLS: SkillItem[] = [
+	{ label: 'Microsoft Azure', icon: faCloud },
+	{ label: 'Azure DevOps', icon: faServer },
+	{ label: 'Git', icon: faCodeBranch },
+];
+
+// Frontend
+export const FRONTEND_SKILLS: SkillItem[] = [
+	{ label: 'Angular', icon: faAngular },
+	{ label: 'JavaScript', icon: faJs },
+	{ label: 'HTML · CSS', icon: faHtml5 },
+	{ label: 'SwiftUI', icon: faSwift },
+];
+
+// Databases
+export const DATABASE_SKILLS: SkillItem[] = [
 	{ label: 'SQL Server', icon: faDatabase },
-	{ label: 'MongoDB', icon: faLeaf }
-];
-
-export const AI_SKILLS: SkillItem[] = [
-	{ label: 'AI', icon: faBrain },
-	{ label: 'AI Prompting', icon: faMagic },
+	{ label: 'MySQL', icon: faDatabase },
+	{ label: 'MongoDB', icon: faDatabase },
 ];

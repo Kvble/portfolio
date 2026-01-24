@@ -1,11 +1,18 @@
-<div class="workflow-container">
-	<div
-		*ngFor="let label of labels"
-		class="label"
-		#labelElement
-		(mouseenter)="showTooltip(label, labelElement)"
-		(mouseleave)="hideTooltip()"
-	>
-		{{ label.name }}
+<div class="workflow-card">
+	<h3 class="workflow-title">Workflow Highlights</h3>
+	
+	<div class="workflow-steps">
+		<div
+			*ngFor="let step of labels"
+			class="step-item"
+			#stepElement
+			(mouseenter)="showTooltip(step, stepElement)"
+			(mouseleave)="hideTooltip()"
+		>
+			<div class="step-icon-container">
+				<fa-icon *ngIf="step.icon" [icon]="step.icon" class="step-icon"></fa-icon>
+			</div>
+			<span class="step-name">{{ step.name }}</span>
+		</div>
 	</div>
 </div>

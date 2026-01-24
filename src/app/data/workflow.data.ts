@@ -1,24 +1,30 @@
 import { WorkflowStep } from '../models';
+import {
+	faClipboardList,
+	faCode,
+	faFlask,
+	faRocket
+} from '@fortawesome/free-solid-svg-icons';
 
 export const WORKFLOW_STEPS: WorkflowStep[] = [
 	{
-		name: 'Goals & Objectives',
-		description: 'Defining project aims and target outcomes to guide design.',
+		name: 'Planning',
+		description: 'Analisi requisiti e pianificazione del progetto.',
+		icon: faClipboardList,
 	},
 	{
-		name: 'Research',
-		description: 'Conducting research to understand the project needs and constraints.',
+		name: 'Development',
+		description: 'Sviluppo e implementazione delle funzionalità.',
+		icon: faCode,
 	},
 	{
-		name: 'Wireframe',
-		description: 'Creating basic design layout to visualize structure.',
+		name: 'Testing',
+		description: 'Test e validazione della qualità del software.',
+		icon: faFlask,
 	},
 	{
-		name: 'Prototyping',
-		description: 'Developing a working model to test the design ideas.',
-	},
-	{
-		name: 'Finalize Design',
-		description: 'Refining the design for final approval and implementation.',
+		name: 'Deployment',
+		description: 'Rilascio in produzione e manutenzione.',
+		icon: faRocket,
 	},
 ];

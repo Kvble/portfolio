@@ -1,22 +1,73 @@
-.workflow-container {
+.workflow-card {
 	display: flex;
-	flex-wrap: wrap;
-	gap: 10px;
+	flex-direction: column;
+	padding: 20px;
+	height: 100%;
+	box-sizing: border-box;
 }
 
-.label {
-	display: inline-flex; /* Flessibile per il contenuto */
-	padding: 10px;
-	background-color: #333;
-	color: white;
-	cursor: pointer;
-	border-radius: 5px;
-	position: relative; /* Necessario per il posizionamento del tooltip */
+.workflow-title {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+	margin: 0 0 20px 0;
 	text-align: center;
+}
+
+.workflow-steps {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	justify-content: space-between;
+}
+
+.step-item {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 16px 20px;
+	background-color: rgba(255, 255, 255, 0.05);
+	border-radius: 12px;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.step-item:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.step-icon-container {
+	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-width: 100px;
-	width: auto; /* In modo che si espanda per contenere il testo */
-	pointer-events: auto; /* Permette l'interazione con l'elemento */
-	z-index: 10; /* Assicura che la label sia sopra gli altri elementi */
+	width: 40px;
+	height: 40px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	flex-shrink: 0;
+}
+
+.step-icon {
+	color: #fff;
+	font-size: 18px;
+}
+
+.step-name {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+@media (max-width: 768px) {
+	.workflow-card {
+		padding: 16px;
+	}
+	
+	.workflow-title {
+		font-size: 18px;
+	}
+	
+	.step-item {
+		padding: 10px 14px;
+	}
 }

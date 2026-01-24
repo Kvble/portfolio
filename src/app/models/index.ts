@@ -14,6 +14,7 @@ export interface SkillItem {
 export interface WorkflowStep {
 	name: string;
 	description: string;
+	icon?: IconDefinition;
 }
 
 /**
