@@ -15,5 +15,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="profile-info"></div>
+	
+	<div class="profile-thoughts">
+		<h3 class="thoughts-title">Mindset</h3>
+		<p class="thought-text" [class.visible]="isVisible" [class.hidden]="!isVisible">
+			"{{ currentThought }}"
+		</p>
+	</div>
 </div>

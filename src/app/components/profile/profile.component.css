@@ -4,8 +4,8 @@
 }
 
 .profile-image {
-	width: 200px;
-	height: 200px;
+	width: 220px;
+	height: 220px;
 	border-radius: 24px;
 	background-image: url("/assets/images/profile.jpg");
 	background-size: 150%;
@@ -20,7 +20,7 @@
 
 .profile-name {
 	display: block;
-	font-size: 25px;
+	font-size: 28px;
 	font-weight: 600;
 	width: 100%;
 }
@@ -77,6 +77,47 @@
     }
 }
 
+.profile-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.profile-thoughts {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	gap: 10px;
+}
+
+.thoughts-title {
+	font-size: 18px;
+	font-weight: 600;
+	color: #fff;
+	margin: 0;
+}
+
+.thought-text {
+	font-size: 17px;
+	font-style: italic;
+	color: rgba(255, 255, 255, 0.6);
+	text-align: center;
+	line-height: 1.6;
+	margin: 0;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.thought-text.visible {
+	opacity: 1;
+}
+
+.thought-text.hidden {
+	opacity: 0;
+}
+
 
 @media (max-width: 768px) {
 	.profile-intro {
@@ -95,5 +136,14 @@
 
 	.profile-availability {
 		font-size: 12px;
+	}
+	
+	.profile-thoughts {
+		padding: 15px;
+		margin-top: 10px;
+	}
+	
+	.thought-text {
+		font-size: 14px;
 	}
 }
