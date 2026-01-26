@@ -76,17 +76,25 @@
 /* Tablet breakpoint */
 @media (max-width: 1200px) {
 	.grid-container {
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(5, auto);
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(8, auto);
 		grid-template-areas:
-			"workflow n-projects n-years"
-			"workflow profile profile"
-			"contact profile profile"
-			"contact skills skills"
-			"clients projects skills";
+			"n-projects n-years"
+			"profile profile"
+			"profile profile"
+			"skills skills"
+			"workflow contact"
+			"workflow contact"
+			"clients clients"
+			"projects projects";
 		width: 90%;
 		min-height: auto;
 		gap: 12px;
+	}
+	
+	.n-projects,
+	.n-years {
+		min-height: 180px;
 	}
 }
 

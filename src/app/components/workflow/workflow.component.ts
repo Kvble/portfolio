@@ -23,8 +23,8 @@ export class WorkflowComponent {
 		const rect = labelElement.getBoundingClientRect();
 
 		this.tooltipService.openTooltip(label.description, {
-			top: rect.top + window.scrollY,
-			left: rect.left + window.scrollX,
+			top: rect.bottom + window.scrollY + 8,
+			left: rect.left + window.scrollX + (rect.width / 2),
 		});
 	}
 

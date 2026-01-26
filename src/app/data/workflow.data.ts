@@ -9,22 +9,22 @@ import {
 export const WORKFLOW_STEPS: WorkflowStep[] = [
 	{
 		name: 'Planning',
-		description: 'Analisi requisiti e pianificazione del progetto.',
+		description: 'Requirements analysis and project planning.',
 		icon: faClipboardList,
 	},
 	{
 		name: 'Development',
-		description: 'Sviluppo e implementazione delle funzionalità.',
+		description: 'Building and implementing features.',
 		icon: faCode,
 	},
 	{
 		name: 'Testing',
-		description: 'Test e validazione della qualità del software.',
+		description: 'Quality assurance and validation.',
 		icon: faFlask,
 	},
 	{
 		name: 'Deployment',
-		description: 'Rilascio in produzione e manutenzione.',
+		description: 'Release to production and maintenance.',
 		icon: faRocket,
 	},
 ];

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
+import { ClientsComponent } from '../clients/clients.component';
 import { ContactComponent } from '../contact/contact.component';
 import { ProfileComponent } from '../profile/profile.component';
 import { CounterComponent } from '../shared/counter/counter.component';
@@ -11,6 +12,7 @@ import { WorkflowComponent } from '../workflow/workflow.component';
 	selector: 'app-grid',
 	imports: [
 		CommonModule,
+		ClientsComponent,
 		ProfileComponent,
 		ContactComponent,
 		CounterComponent,
@@ -21,3 +23,4 @@ import { WorkflowComponent } from '../workflow/workflow.component';
 	styleUrl: './grid.component.css',
 })
 export class GridComponent {}
+

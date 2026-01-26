@@ -58,6 +58,13 @@
 	font-weight: 500;
 }
 
+/* Tablet breakpoint */
+@media (max-width: 1200px) {
+	.workflow-steps {
+		gap: 10px;
+	}
+}
+
 @media (max-width: 768px) {
 	.workflow-card {
 		padding: 16px;
@@ -76,3 +83,4 @@
 		padding: 12px 16px;
 	}
 }
+

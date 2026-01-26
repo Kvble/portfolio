@@ -1,0 +1,21 @@
+<div class="clients-container">
+	<h3 class="clients-title">Where I've Worked</h3>
+	
+	<div class="clients-wrapper" #logosContainer>
+		<!-- Static logos (when they fit) -->
+		<div class="clients-logos" #logosContent [class.hidden]="needsCarousel">
+			<div *ngFor="let client of clients" class="client-logo">
+				<img [src]="client.logo" [alt]="client.name" [title]="client.name">
+			</div>
+		</div>
+		
+		<!-- Carousel (when they don't fit) -->
+		<div class="clients-carousel" [class.hidden]="!needsCarousel">
+			<div class="carousel-track">
+				<div *ngFor="let client of repeatedClients" class="client-logo">
+					<img [src]="client.logo" [alt]="client.name" [title]="client.name">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
