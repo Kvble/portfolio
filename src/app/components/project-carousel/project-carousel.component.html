@@ -1,0 +1,42 @@
+<div class="wrapper">
+	<h2 class="card-title">Projects</h2>
+	<div class="carousel-container">
+		<button
+			class="nav-btn prev"
+			(click)="prev()"
+			[disabled]="!canGoPrev"
+			[class.disabled]="!canGoPrev"
+		>
+			<span class="arrow left"></span>
+		</button>
+
+		<div class="carousel-viewport">
+			<div
+				class="carousel-track"
+				[style.transform]="'translateX(' + (-currentIndex * itemWidth) + 'px)'"
+			>
+				<a
+					*ngFor="let project of projects"
+					[href]="project.url"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="carousel-item"
+				>
+					<img [src]="project.image" [alt]="project.title" class="project-image" />
+					<div class="project-overlay">
+						<span class="project-title">{{ project.title }}</span>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<button
+			class="nav-btn next"
+			(click)="next()"
+			[disabled]="!canGoNext"
+			[class.disabled]="!canGoNext"
+		>
+			<span class="arrow right"></span>
+		</button>
+	</div>
+</div>

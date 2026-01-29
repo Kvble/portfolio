@@ -28,3 +28,12 @@ export interface CounterConfig {
 	delay?: number;
 	duration?: number;
 }
+
+/**
+ * Represents a project with images carousel
+ */
+export interface Project {
+	title: string;
+	url: string;
+	image: string;
+}

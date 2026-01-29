@@ -6,10 +6,10 @@
 		<app-contact></app-contact>
 	</div>
 	<div class="card n-projects">
-		<app-counter [value]="10" label="Projects" [animated]="true"></app-counter>
+		<app-counter [value]="15" label="Projects" [animated]="true"></app-counter>
 	</div>
 	<div class="card n-years">
-		<app-counter [value]="4" label="Years Expertise" suffix="+" [animated]="false"></app-counter>
+		<app-counter [value]="5" label="Years Expertise" suffix="+" [animated]="true"></app-counter>
 	</div>
 	<div class="card profile">
 		<app-profile></app-profile>
@@ -20,5 +20,7 @@
 	<div class="card skills">
 		<app-skills></app-skills>
 	</div>
-	<div class="card projects">projects</div>
+	<div class="card projects">
+		<app-project-carousel [projects]="projects"></app-project-carousel>
+	</div>
 </div>
