@@ -13,8 +13,14 @@ export class ProjectCarouselComponent {
 	@Input() projects: Project[] = [];
 
 	currentIndex = 0;
+	itemWidth = this.calcItemWidth();
 
-	get itemWidth(): number {
+	@HostListener('window:resize')
+	onResize(): void {
+		this.itemWidth = this.calcItemWidth();
+	}
+
+	private calcItemWidth(): number {
 		const width = window.innerWidth;
 		if (width <= 768) return 240;
 		if (width <= 1024) return 275;

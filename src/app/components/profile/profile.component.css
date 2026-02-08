@@ -41,6 +41,15 @@
     font-weight: bold;
 }
 
+.typewriter-cursor {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
 .profile-availability{
 	padding: 10px 15px;
 	border-radius: 50px;
@@ -128,6 +137,7 @@
 
 	.profile-name {
 		font-size: 20px;
+		text-align: center;
 	}
 
 	.profile-title {

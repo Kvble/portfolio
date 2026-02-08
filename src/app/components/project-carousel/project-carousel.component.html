@@ -6,6 +6,7 @@
 			(click)="prev()"
 			[disabled]="!canGoPrev"
 			[class.disabled]="!canGoPrev"
+			aria-label="Previous project"
 		>
 			<span class="arrow left"></span>
 		</button>
@@ -35,6 +36,7 @@
 			(click)="next()"
 			[disabled]="!canGoNext"
 			[class.disabled]="!canGoNext"
+			aria-label="Next project"
 		>
 			<span class="arrow right"></span>
 		</button>
