@@ -1,6 +1,5 @@
-import { AfterViewInit, Component, ElementRef, ViewChild, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import Typewriter from 'typewriter-effect/dist/core';
 
 @Component({
 	selector: 'app-profile',
@@ -9,8 +8,14 @@ import Typewriter from 'typewriter-effect/dist/core';
 	templateUrl: './profile.component.html',
 	styleUrl: './profile.component.css',
 })
-export class ProfileComponent implements AfterViewInit, OnInit, OnDestroy {
-	@ViewChild('typewriterText', { static: true }) typewriterText!: ElementRef;
+export class ProfileComponent implements OnInit, OnDestroy {
+	private titles = [
+		"AI Software Engineer",
+		"Data Science Student",
+		".NET Software Engineer",
+		"Crypto & Forex Trader",
+		"Backend Software Engineer",
+	];
 
 	thoughts = [
 		"Building intelligent systems means designing for constraints, trade-offs, and long-term behavior.",
@@ -19,28 +24,34 @@ export class ProfileComponent implements AfterViewInit, OnInit, OnDestroy {
 		"The temporary discomfort of discipline is better than the permanent pain of regret.",
 		"Everything negative — pressure, challenges — is all an opportunity for me to rise."
 	];
-	
+
+	typewriterText = '';
 	currentThoughtIndex = 0;
 	currentThought = '';
 	isVisible = true;
-	private thoughtInterval: any;
+	private thoughtInterval: ReturnType<typeof setInterval> | null = null;
+	private thoughtTimeout: ReturnType<typeof setTimeout> | null = null;
+	private typewriterTimer: ReturnType<typeof setTimeout> | null = null;
+	private destroyed = false;
 
 	ngOnInit(): void {
 		this.currentThought = this.thoughts[0];
 		this.startThoughtRotation();
+		this.runTypewriter();
 	}
 
 	ngOnDestroy(): void {
-		if (this.thoughtInterval) {
-			clearInterval(this.thoughtInterval);
-		}
+		this.destroyed = true;
+		if (this.thoughtInterval) clearInterval(this.thoughtInterval);
+		if (this.thoughtTimeout) clearTimeout(this.thoughtTimeout);
+		if (this.typewriterTimer) clearTimeout(this.typewriterTimer);
 	}
 
 	private startThoughtRotation(): void {
 		this.thoughtInterval = setInterval(() => {
 			this.isVisible = false;
-			
-			setTimeout(() => {
+
+			this.thoughtTimeout = setTimeout(() => {
 				this.currentThoughtIndex = (this.currentThoughtIndex + 1) % this.thoughts.length;
 				this.currentThought = this.thoughts[this.currentThoughtIndex];
 				this.isVisible = true;
@@ -48,27 +59,39 @@ export class ProfileComponent implements AfterViewInit, OnInit, OnDestroy {
 		}, 8000);
 	}
 
-	ngAfterViewInit(): void {
-		new Typewriter(this.typewriterText.nativeElement, {
-			loop: true,
-			delay: 30,
-			deleteSpeed: 40,
-		})
-			.typeString("AI Software Engineer")
-			.pauseFor(1500)
-			.deleteAll()
-			.typeString("Data Science Student")
-			.pauseFor(1500)
-			.deleteAll()
-			.typeString(".NET Software Engineer")
-			.pauseFor(1500)
-			.deleteAll()
-			.typeString("Crypto & Forex Trader")
-			.pauseFor(1500)
-			.deleteAll()
-			.typeString("Backend Software Engineer")
-			.pauseFor(1500)
-			.deleteAll()
-			.start();
+	private runTypewriter(): void {
+		let titleIndex = 0;
+
+		const loop = () => {
+			if (this.destroyed) return;
+			const text = this.titles[titleIndex];
+
+			this.typeChar(text, 0, 30, () => {
+				this.typewriterTimer = setTimeout(() => {
+					this.deleteChar(text.length, 40, () => {
+						titleIndex = (titleIndex + 1) % this.titles.length;
+						loop();
+					});
+				}, 1500);
+			});
+		};
+
+		loop();
+	}
+
+	private typeChar(text: string, index: number, delay: number, onDone: () => void): void {
+		if (this.destroyed) return;
+		if (index > text.length) { onDone(); return; }
+
+		this.typewriterText = text.substring(0, index);
+		this.typewriterTimer = setTimeout(() => this.typeChar(text, index + 1, delay, onDone), delay);
+	}
+
+	private deleteChar(length: number, delay: number, onDone: () => void): void {
+		if (this.destroyed) return;
+		if (length < 0) { onDone(); return; }
+
+		this.typewriterText = this.typewriterText.substring(0, length);
+		this.typewriterTimer = setTimeout(() => this.deleteChar(length - 1, delay, onDone), delay);
 	}
 }
